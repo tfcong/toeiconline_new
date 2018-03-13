@@ -1,0 +1,27 @@
+create table users (
+id integer NOT NULL,
+name nvarchar2(50) null,
+password nvarchar2(50) null,
+fullname nvarchar2(100) null,
+createddate timestamp null,
+roleid integer null
+);
+create table role(
+id integer not null,
+name varchar(50) null
+);
+create table listenguideline(
+  id integer NOT NULL,
+  title NVARCHAR2(512) null,
+  image VARCHAR2(100) null,
+  content VARCHAR2(4000) ,
+  createddate TIMESTAMP null,
+  modifieddate TIMESTAMP null
+);
+create table comments(
+  id integer NOT NULL,
+  content VARCHAR2(4000) null,
+  userid INTEGER null,
+  listenguidelineid INTEGER null,
+  createddate TIMESTAMP null
+);
